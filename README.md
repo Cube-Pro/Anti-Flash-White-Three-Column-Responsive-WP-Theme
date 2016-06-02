@@ -3,7 +3,8 @@ Clean simple two column WordPress theme built with bootstrap with Anti-Flash Whi
 
 Anti-Flash White is ``` #f1f2f3; ```
 
-Created by Lorin Hart using underscore as a base template.
+Created by Lorin Hart using underscore ```http://underscores.me/``` as a base template.
 
-To use download and unzip file to the WordPress theme folder typically found at
+To use download and unzip file to the WordPress theme folder typically found at:
+
 ```(WordPress Install Location)/wp-content/themes```
