@@ -48,6 +48,7 @@
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<div class="navbar-right">
 					<?php wp_nav_menu( array( 
 						'theme_location'  => 'primary',
 					    // 'menu'            => ,
@@ -67,11 +68,21 @@
 					    // 'walker'          =>
 					 	 ) ); 
 					 ?>
-				<div class="navbar-right">
+				<!-- <div class="navbar-right"> -->
 					<?php 
 					  // get_search_form(); 
+
 					?>
+					<ul class="nav navbar-nav">
+						<li style="margin: 1rem;">
+							<form method="get" id="search_form" class="inline-form" role="search" action="<?php bloginfo('home'); ?>"/>
+	       					<input type="text"  name="s" value="" >
+	             			<button type="submit" class="btn btn-primary submit">Submit</button>
+						    </form>
+					    </li>
+				    </ul>
 				</div>
+
 
 			</div><!-- /.navbar-collapse -->
 		</div>
