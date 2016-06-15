@@ -23,7 +23,12 @@
 <!-- Font Awesome -->
 <link href="<?php bloginfo('template_directory');?>/inc/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <!-- Custom styles for this template -->
-<link href="<?php bloginfo('template_directory');?>/blog.css" rel="stylesheet">
+<link href="<?php bloginfo('template_directory');?>/theme.css" rel="stylesheet">
+<!-- JS Social -->
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/inc/jssocials/jssocials.css" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/inc/jssocials/jssocials-theme-minima.css" />
+
+
 
 </head>
 

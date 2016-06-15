@@ -33,4 +33,18 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- JS Socials -->
+<script src="<?php bloginfo('template_directory');?>/inc/jssocials/jssocials.min.js"></script>
+<script>
+    $("#shareIcons").jsSocials({
+    	shareIn: "popup",
+	    showLabel: false,
+	    showCount: false,
+	    shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+	});
+
+	$("#share").jsSocials({
+	    shares: ["twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+	});
+</script>
 </html>
