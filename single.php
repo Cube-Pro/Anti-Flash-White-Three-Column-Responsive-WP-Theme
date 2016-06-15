@@ -18,6 +18,11 @@ get_header(); ?>
 
 			<?php
 			while ( have_posts() ) : the_post();
+				
+				if (has_post_thumbnail()) 
+				{
+					the_post_thumbnail();
+				}
 
 				get_template_part( 'template-parts/content', get_post_format() );
 
