@@ -12,11 +12,11 @@
  * @package Anti-Flash-White
  */
 
-get_header(); ?>
+get_header();
+include('left-sidebar.php');
+?>
 <!-- <div class="container"> -->
-	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-				
-	</div>
+	
 	<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
 
 	<div id="primary" class="content-area">

@@ -7,8 +7,11 @@
  * @package Anti-Flash-White
  */
 
-get_header(); ?>
+get_header();
+include('left-sidebar.php');
+?>
 <!-- <div class="container"> -->
+
 	<div class="col-lg-8">
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
