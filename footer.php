@@ -16,9 +16,10 @@
 	<div class="container">
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info text-center">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'Anti-Flash-White' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'Anti-Flash-White' ), 'WordPress' ); ?></a>
+			Proudly powered by
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'Anti-Flash-White' ) ); ?>"><?php printf( esc_html__( ' %s', 'Anti-Flash-White' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'Anti-Flash-White' ), 'Anti-Flash-White', '<a href="http://cubepro.us" rel="designer">Lorin Hart</a>' ); ?>
+			<?php printf( esc_html__( '%1$s by %2$s.', 'Anti-Flash-White' ), 'Anti-Flash-White', '<a href="http://cubepro.us" rel="designer">Lorin Hart</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	</div>
@@ -40,11 +41,14 @@
     	shareIn: "popup",
 	    showLabel: false,
 	    showCount: false,
-	    shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+	    shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon"]
 	});
 
 	$("#share").jsSocials({
-	    shares: ["twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+		shareIn: "popup",
+	    showCount: true,
+	    showLabel: true,
+	    shares: ["twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon"]
 	});
 </script>
 </html>

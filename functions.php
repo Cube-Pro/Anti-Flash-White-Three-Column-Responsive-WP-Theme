@@ -169,6 +169,7 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 
+
 function mytheme_comment($comment, $args, $depth) {
     if ( 'div' === $args['style'] ) {
         $tag       = 'div';
@@ -182,21 +183,23 @@ function mytheme_comment($comment, $args, $depth) {
     <?php if ( 'div' != $args['style'] ) : ?>
         <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
     <?php endif; ?>
+    <?php edit_comment_link( __( '(Edit)' ), '  ', '' );  ?>
     <div class="comment-author vcard">
-        <?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-        <?php printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>' ), get_comment_author_link() ); ?>
+        
+        <?php printf( __( '<cite class="fn">%s</cite> <span class="says">said on</span>' ), get_comment_author_link() ); ?>
+        <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
+        <?php
+        /* translators: 1: date, 2: time */
+        printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time() ); ?></a>
+
+
     </div>
     <?php if ( $comment->comment_approved == '0' ) : ?>
          <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
-          <br />
+         
     <?php endif; ?>
 
-    <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
-        <?php
-        /* translators: 1: date, 2: time */
-        printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)' ), '  ', '' );
-        ?>
-    </div>
+   
 
     <?php comment_text(); ?>
 
@@ -208,7 +211,6 @@ function mytheme_comment($comment, $args, $depth) {
     <?php endif; ?>
     <?php
     }
-
 
 
 add_filter( 'comment_form_default_fields', 'bootstrap3_comment_form_fields' );
@@ -242,4 +244,8 @@ function bootstrap3_comment_form( $args ) {
     return $args;
 }
 
-
+//Read More
+function new_excerpt_more( $more ) {
+	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('<br/>Read More...', 'your-text-domain') . '</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );

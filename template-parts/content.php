@@ -33,7 +33,7 @@
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'Anti-Flash-White' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( '<br/>Continue reading %s <span class="meta-nav">&rarr;</span>', 'Anti-Flash-White' ), array( 'span', 'br' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text btn btn-success">"', '"</span>', false )
 			) );
 
@@ -45,6 +45,11 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php anti_flash_white_theme_entry_footer(); ?>
+		<hr/>
+		<?php 
+			if(is_single()){
+				anti_flash_white_theme_entry_footer(); 
+			}
+		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

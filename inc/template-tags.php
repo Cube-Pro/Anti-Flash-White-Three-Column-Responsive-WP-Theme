@@ -24,8 +24,8 @@ if ( ! function_exists( 'anti_flash_white_theme_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		$posted_on = sprintf(
-			esc_html_x( 'Posted on %s', 'post date', 'Anti-Flash-White' ),
+		$posted_on = sprintf('<span class="fa fa-calendar" aria-hidden="true"></span>'.
+			esc_html_x( ' %s', 'post date', 'Anti-Flash-White' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -34,12 +34,9 @@ if ( ! function_exists( 'anti_flash_white_theme_posted_on' ) ) :
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span><br/>'; // WPCS: XSS OK.
+		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
-		//show the categories
-		anti_flash_white_theme_entry_categories();
-		//show the tags
-		anti_flash_white_theme_entry_tags();
+		
 		
 		
 	}
@@ -51,13 +48,18 @@ if ( ! function_exists( 'anti_flash_white_theme_entry_footer' ) ) :
 	 * Prints HTML with meta information for the comments.
 	 */
 	function anti_flash_white_theme_entry_footer() {
+		//show the categories
+		anti_flash_white_theme_entry_categories();
+		//show the tags
+		anti_flash_white_theme_entry_tags();
+		anti_flash_white_theme_social_icons_large();
 		
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			/* translators: %s: post title */
-			comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'Anti-Flash-White' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
-			echo '</span>';
-		}
+		// if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		// 	echo '<span class="comments-link">';
+		// 	/* translators: %s: post title */
+		// 	comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'Anti-Flash-White' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+		// 	echo '</span>';
+		// }
 
 		// edit_post_link(
 		// 	sprintf(
@@ -133,6 +135,15 @@ if (! function_exists('anti_flash_white_theme_social_icons') ):
 	 */
 	function anti_flash_white_social_icons(){
 			printf('<span id="shareIcons" class="pull-right"></span>');
+	}
+endif;
+
+if (! function_exists('anti_flash_white_theme_social_icons_large') ):
+	/**
+	 * Prints top set of social icons
+	 */
+	function anti_flash_white_theme_social_icons_large(){
+			printf('<div id="share" class="justify"></div>');
 	}
 endif;
 
