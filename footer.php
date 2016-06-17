@@ -15,12 +15,14 @@
 
 	<div class="container">
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info text-center">
-			Proudly powered by
+		<div class="col-lg-12 site-info text-center">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'Anti-Flash-White' ) ); ?>"><?php printf( esc_html__( ' %s', 'Anti-Flash-White' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
+			<span class="sep"> theme </span>
 			<?php printf( esc_html__( '%1$s by %2$s.', 'Anti-Flash-White' ), 'Anti-Flash-White', '<a href="http://cubepro.us" rel="designer">Lorin Hart</a>' ); ?>
 		</div><!-- .site-info -->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+			&copy; <?php echo date("Y")." - ";bloginfo( 'name' );  ?>
+		</div>
 	</footer><!-- #colophon -->
 	</div>
 
