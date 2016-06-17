@@ -249,3 +249,32 @@ function new_excerpt_more( $more ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('<br/>Read More...', 'your-text-domain') . '</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+
+
+/**
+ * Display navigation to next/previous post when applicable.
+ *
+ * @return void
+ */
+function custom_post_navigation() {
+	// Don't print empty markup if there's nowhere to navigate.
+	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+	$next     = get_adjacent_post( false, '', false );
+
+	if ( ! $next && ! $previous ) {
+		return;
+	}
+	?>
+	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'anti_flash_white_theme' ); ?></h1>
+		<div class="nav-links">
+			<?php
+				previous_post_link( '<button class="nav-btn btn btn-success pull-left">%link</button>', _x( '<i class="fa fa-chevron-left"></i> %title', 'Previous post link', 'anti_flash_white_theme' ) );
+				next_post_link(     '<button class="nav-btn btn btn-success pull-right">%link</button>',     _x( '%title <i class="fa fa-chevron-right"></i>', 'Next post link',     'anti_flash_white_theme' ) );
+			?>
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}
+?>

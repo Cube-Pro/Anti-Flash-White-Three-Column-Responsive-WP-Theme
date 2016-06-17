@@ -1,3 +1,3 @@
-<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+<div class="hidden-xs hidden-xs col-md-2 col-lg-2">
 	<?php dynamic_sidebar( 'sidebar_2' ); ?>	
 </div>
