@@ -12,7 +12,7 @@ include('left-sidebar.php');
 ?>
 <!-- <div class="container"> -->
 
-	<div class="col-lg-8">
+	<div class="col-lg-7">
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -51,4 +51,5 @@ include('left-sidebar.php');
 
 <?php
 get_sidebar();
+include('left-sidebar-small.php');
 get_footer();

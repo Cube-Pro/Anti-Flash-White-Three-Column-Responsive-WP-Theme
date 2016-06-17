@@ -266,11 +266,11 @@ body,
 input,
 select,
 textarea {
-	color: #404040;
+	/*color: #404040;
 	font-family: sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 1.5;*/
 }
 
 h1,
@@ -365,7 +365,8 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	/* Fallback for when there is no custom background color defined. */
+	/*background: #fff; */
 }
 
 blockquote:before,
@@ -1191,4 +1192,3 @@ object {
 .site-footer{
 	margin-top: 3rem;
 }
-

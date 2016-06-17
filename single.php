@@ -43,4 +43,5 @@ include('left-sidebar.php');
 
 <?php
 get_sidebar();
+include('left-sidebar-small.php');
 get_footer();

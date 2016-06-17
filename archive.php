@@ -7,9 +7,10 @@
  * @package Anti-Flash-White
  */
 
-get_header(); ?>
+get_header();
+include('left-sidebar.php'); ?>
 <!-- <div class="container"> -->
-	<div class="col-lg-8">
+	<div class="col-lg-7">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 
@@ -51,4 +52,5 @@ get_header(); ?>
 
 <?php
 get_sidebar();
+include('left-sidebar-small.php');
 get_footer();

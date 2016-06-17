@@ -25,30 +25,8 @@
 	</div>
 
 </div><!-- #page -->
-
+<!-- Placed at the end of the document so the pages load faster -->
 <?php wp_footer(); ?>
 <!-- </div> --><!-- closing container -->
 </body>
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<!-- JS Socials -->
-<script src="<?php bloginfo('template_directory');?>/inc/jssocials/jssocials.min.js"></script>
-<script>
-    $("#shareIcons").jsSocials({
-    	shareIn: "popup",
-	    showLabel: false,
-	    showCount: false,
-	    shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon"]
-	});
-
-	$("#share").jsSocials({
-		shareIn: "popup",
-	    showCount: true,
-	    showLabel: true,
-	    shares: ["twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon"]
-	});
-</script>
 </html>
