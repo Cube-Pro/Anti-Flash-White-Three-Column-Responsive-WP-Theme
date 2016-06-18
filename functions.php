@@ -141,7 +141,7 @@ add_action( 'wp_enqueue_scripts', 'anti_flash_white_theme_styles' );
  */
 function anti_flash_white_theme_scripts() {
 
-	wp_enqueue_script( 'js-jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.0.0', true );
+	wp_enqueue_script( 'js-jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.12.4', true );
 
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.6', true );
 
