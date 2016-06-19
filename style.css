@@ -1193,6 +1193,28 @@ object {
 	margin-top: 3rem;
 }
 
+a.back-to-top {
+	display: none;
+	width: 40px;
+	height: 40px;
+	/*text-indent: -9999px;*/
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+	background: #808080 no-repeat center 43%;
+	opacity: .8;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 5px;
+	color: #ffffff;
+	text-align: center;
+}
+
+i.back-to-top{
+	opacity: 1;
+}
+
 
 @media (max-width: 991px) {
     .navbar-header {
@@ -1234,5 +1256,11 @@ object {
 		/*font-family: 'Tangerine', cursive;*/
 		font-family: 'Black Ops One', cursive;
 		font-size: 1.25rem;
+	}
+}
+
+@media(max-width: 768px){
+	.navbar-brand{
+		font-size: 1rem;
 	}
 }

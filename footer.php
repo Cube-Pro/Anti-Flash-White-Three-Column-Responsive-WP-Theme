@@ -10,10 +10,16 @@
  */
 
 ?>
-
+	
 	</div><!-- #content -->
 
 	<div class="container">
+	<div class="back-to-top">
+		<a href="#" class="back-to-top">
+			<i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i>
+			<span class="screen-reader-text">Back to Top</span>
+		</a>
+	</div>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="col-lg-12 site-info text-center">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'Anti-Flash-White' ) ); ?>"><?php printf( esc_html__( ' %s', 'Anti-Flash-White' ), 'WordPress' ); ?></a>
