@@ -209,6 +209,7 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
+
 input {
 	line-height: normal;
 }
@@ -434,7 +435,7 @@ input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
 	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
+	/*border-radius: 3px;*/
 	/*background: #e6e6e6;*/
 	/*box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);*/
 	/*color: rgba(0, 0, 0, .8);*/
@@ -1274,3 +1275,5 @@ i.back-to-top{
 		font-size: 1rem;
 	}
 }
+
+
