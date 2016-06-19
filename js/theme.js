@@ -1,3 +1,18 @@
+$(document).ready(function() {
+	$('.comments-area').hide();
+
+ 	$('#comment-section').click(function(event) {
+ 		/* Act on the event */
+ 		event.preventDefault();
+ 		$('.comments-area').toggle(400);
+ 	});
+
+ 	$('.comments-area').hover(function() {
+        $(this).css('cursor','pointer');
+    });
+
+ }); 
+
   $("#shareIcons").jsSocials({
     	shareIn: "popup",
 	    showLabel: false,

@@ -1060,6 +1060,16 @@ ol.comment-list {
 #cancel-comment-reply {}
 #cancel-comment-reply a {}
 
+#comment-section
+{
+    cursor: pointer;
+}
+
+#comment-section:hover
+{
+    text-decoration: underline;
+}
+
 
 /*--------------------------------------------------------------
 # Infinite scroll
