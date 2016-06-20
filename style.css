@@ -789,6 +789,24 @@ a:active {
 	padding-bottom: 1.75em;
 }
 
+.widget_archive select{
+	/*margin: 50px;*/
+border: 1px solid #111;
+	background: #ffffff;
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid #ccc;
+	/*height: 34px;*/
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	/*background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat #eee;*/
+	
+
+}
+
+
+
 .widget-area > :last-child,
 .widget > :last-child {
 	margin-bottom: 0;
@@ -845,6 +863,12 @@ a:active {
 	color: #fff;
 }
 
+.widget_calendar > h2:before{
+	content: "\f073";
+    font-family: FontAwesome;
+    padding-right: 1rem;
+}
+
 /* Recent Posts widget */
 .widget_recent_entries .post-date {
 	color: #686868;
@@ -863,6 +887,8 @@ a:active {
 /* RSS widget */
 .widget_rss .rsswidget img {
 	margin-top: -0.375em;
+	content: "\f09e";
+    font-family: FontAwesome
 }
 
 .widget_rss .rss-date,
@@ -875,6 +901,15 @@ a:active {
 	font-style: normal;
 	line-height: 1.615384615;
 	margin-bottom: 0.538461538em;
+}
+
+.widget_rss > h2:before{
+	content: "\f09e";
+    font-family: FontAwesome;
+}
+
+.rss-widget-icon{
+	visibility: hidden;
 }
 
 .widget_rss .rssSummary:last-child {
@@ -901,6 +936,12 @@ a:active {
 	border-color: #007acc;
 	color: #007acc;
 	outline: 0;
+}
+
+.widget_recent_comments > h2:before{
+	content: "\f0e6";
+    font-family: FontAwesome;
+    padding-right: 1rem;
 }
 
 
@@ -991,7 +1032,8 @@ a:active {
     margin-bottom: 2rem;
 }
 
-ol.comment-list {
+ol.comment-list ,
+ul.comment-list{
 	margin-left: 0rem;
 }
 
@@ -1000,6 +1042,7 @@ ol.comment-list {
     border-width: 1px;
     border-bottom-style: solid;
     padding: 1rem;
+    list-style: none;
 }
 
 .comment-author{
@@ -1046,8 +1089,12 @@ ol.comment-list {
 .comment-list .comment-author {}
 .comment-list .comment-author-admin {}
 
-.comment-list {}
-.comment-list li {}
+.comment-list {
+	padding-left: 1rem;
+}
+.comment-list li {
+	list-style: none;
+}
 .comment-list li p {}
 .comment-list li ul {}
 .comment-list li ul.children li {}
@@ -1277,3 +1324,10 @@ i.back-to-top{
 }
 
 
+
+@media screen and (min-width: 0\0) {
+  select {
+    background: none;
+    padding: 5px;
+  }
+}

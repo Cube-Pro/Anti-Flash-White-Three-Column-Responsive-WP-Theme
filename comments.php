@@ -19,15 +19,16 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<h2 id="comment-section" class="comments-title">
-			<?php
-				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'Anti-Flash-White' ) ),
-					number_format_i18n( get_comments_number() ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			?>
-		</h2>
+<h3 id="comment-section" class="comments-title">
+	<span class="fa fa-comments-o"></span>
+	<?php
+		printf( // WPCS: XSS OK.
+			esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'Anti-Flash-White' ) ),
+			number_format_i18n( get_comments_number() ),
+			'<span>' . get_the_title() . '</span>'
+		);
+	?>
+</h3>
 <div id="comments" class="comments-area">
 
 	<?php
@@ -50,7 +51,7 @@ if ( post_password_required() ) {
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // Check for comment navigation. ?>
 
-		<ol class="comment-list">
+		<ul class="comment-list">
 			<?php
 				// wp_list_comments( array(
 				// 	'style'      => 'ol',
@@ -60,7 +61,7 @@ if ( post_password_required() ) {
 				wp_list_comments( 'type=comment&callback=mytheme_comment' ); 
 
 			?>
-		</ol><!-- .comment-list -->
+		</ul><!-- .comment-list -->
 		<hr/>
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">

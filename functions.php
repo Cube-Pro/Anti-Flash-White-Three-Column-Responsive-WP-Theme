@@ -211,7 +211,7 @@ function mytheme_comment($comment, $args, $depth) {
     <?php endif; ?>
     <?php edit_comment_link( __( '(Edit)' ), '  ', '' );  ?>
     <div class="comment-author vcard">
-        
+        <span class="fa fa-comment-o fa-2x"></span>
         <?php printf( __( '<cite class="fn">%s</cite> <span class="says">said on</span>' ), get_comment_author_link() ); ?>
         <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
         <?php

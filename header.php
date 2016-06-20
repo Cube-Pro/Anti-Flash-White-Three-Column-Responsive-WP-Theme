@@ -69,10 +69,16 @@
 					?>
 					<ul class="nav navbar-nav">
 						<li style="margin: 1rem;">
-							<form method="get" id="search_form" class="inline-form" role="search" action="<?php bloginfo('home'); ?>"/>
-	       					<input type="text"  name="s" value="" >
-	             			<button type="submit" class="btn btn-primary submit">Submit</button>
-						    </form>
+							<!-- <form method="get" id="search_form" class="inline-form" role="search" action="
+							<?php 
+							//bloginfo('home'); 
+							?>
+							"/>
+	       					<input type="text" class="" style="width: 73%;"  name="s" value="" placeholder="" >
+	             			<button type="submit" class="btn btn-primary submit"><span class="fa fa-search"></span><span class="screen-reader-text">Submit</span></button>
+
+						    </form> -->
+						    <?php include 'searchform.php';?>
 					    </li>
 				    </ul>
 				</div>

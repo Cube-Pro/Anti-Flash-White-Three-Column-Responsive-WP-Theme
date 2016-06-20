@@ -11,6 +11,8 @@ $(document).ready(function() {
         $(this).css('cursor','pointer');
     });
 
+    $('.rss-widget-icon').hide() ;
+
  }); 
 
   $("#shareIcons").jsSocials({
