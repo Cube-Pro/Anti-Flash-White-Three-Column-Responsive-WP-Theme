@@ -801,7 +801,7 @@ border: 1px solid #111;
 	-moz-appearance: none;
 	appearance: none;
 	/*background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat #eee;*/
-	
+
 
 }
 
@@ -1248,7 +1248,9 @@ object {
 }*/
 
 .site-footer{
-	margin-top: 3rem;
+	    background-color: darkgrey;
+    padding: 2rem 0rem;
+    margin: 3rem 0rem 0rem 0rem;
 }
 
 a.back-to-top {
@@ -1330,4 +1332,10 @@ i.back-to-top{
     background: none;
     padding: 5px;
   }
+}
+
+/* woo theme */
+.woo-shop{
+	background-color: #ffffff;
+	padding: 1rem;
 }

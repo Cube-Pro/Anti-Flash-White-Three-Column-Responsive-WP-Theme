@@ -7,6 +7,8 @@
  * @package Anti-Flash-White
  */
 
+
+
 if ( ! function_exists( 'anti_flash_white_theme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -43,9 +45,19 @@ function anti_flash_white_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'Anti-Flash-White' ),
-	) );
+	// register_nav_menus( array(
+	// 	'primary' => esc_html__( 'Primary', 'Anti-Flash-White' ),
+	// ) );
+
+	// boostrap registraion menu
+
+	add_action( 'after_setup_theme', 'wpt_setup' );
+    if ( ! function_exists( 'wpt_setup' ) ):
+        function wpt_setup() {  
+            register_nav_menu( 'primary', __( 'Primary navigation', 'wptuts' ) );
+        } endif;
+
+
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -187,7 +199,7 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-
+require_once('wp_bootstrap_navwalker.php');
 
 
 
@@ -302,5 +314,20 @@ function custom_post_navigation() {
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
+}
+
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+
+add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
+
+function my_theme_wrapper_start() {
+  echo '<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7"><main id="main" class="site-main" role="main">';
+}
+
+function my_theme_wrapper_end() {
+  echo '</main></div>';
 }
 ?>
