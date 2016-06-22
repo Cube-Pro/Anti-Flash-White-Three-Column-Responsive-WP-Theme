@@ -9,7 +9,7 @@
 
 
 
-if ( ! function_exists( 'anti_flash_white_theme_setup' ) ) :
+if ( ! function_exists( 'anti_flash_white_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -17,14 +17,14 @@ if ( ! function_exists( 'anti_flash_white_theme_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function anti_flash_white_theme_setup() {
+function anti_flash_white_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on Anti-Flash-White, use a find and replace
 	 * to change 'Anti-Flash-White' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'Anti-Flash-White', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'anti-flash-white', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -84,7 +84,7 @@ function anti_flash_white_theme_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'anti_flash_white_theme_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'anti_flash_white_custom_background_args', array(
 		'default-color' => 'f0f0f0',
 		'default-image' => '',
 	) ) );
@@ -92,7 +92,7 @@ function anti_flash_white_theme_setup() {
 
 }
 endif;
-add_action( 'after_setup_theme', 'anti_flash_white_theme_setup' );
+add_action( 'after_setup_theme', 'anti_flash_white_setup' );
 
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
@@ -106,17 +106,17 @@ function woocommerce_support() {
  *
  * @global int $content_width
  */
-function anti_flash_white_theme_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'anti_flash_white_theme_content_width', 640 );
+function anti_flash_white_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'anti_flash_white_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'anti_flash_white_theme_content_width', 0 );
+add_action( 'after_setup_theme', 'anti_flash_white_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function anti_flash_white_theme_widgets_init() {
+function anti_flash_white_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'Anti-Flash-White' ),
 		'id'            => 'sidebar-1',
@@ -137,12 +137,12 @@ function anti_flash_white_theme_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'anti_flash_white_theme_widgets_init' );
+add_action( 'widgets_init', 'anti_flash_white_widgets_init' );
 
 /**
  * Enqueue scripts and styles placed in head.
  */
-function anti_flash_white_theme_styles() {
+function anti_flash_white_styles() {
 	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css' , array(), '3.3.6');
 
 	wp_enqueue_style( 'fontawesome-style', get_template_directory_uri() . '/inc/font-awesome/css/font-awesome.min.css', array(), '4.6.3');
@@ -152,13 +152,13 @@ function anti_flash_white_theme_styles() {
 
 
 }
-add_action( 'wp_enqueue_scripts', 'anti_flash_white_theme_styles' );
+add_action( 'wp_enqueue_scripts', 'anti_flash_white_styles' );
 
 
 /**
  * Enqueue scripts placed in footer.
  */
-function anti_flash_white_theme_scripts() {
+function anti_flash_white_scripts() {
 
 	wp_enqueue_script( 'js-jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.12.4', true );
 
@@ -179,7 +179,7 @@ function anti_flash_white_theme_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'anti_flash_white_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'anti_flash_white_scripts' );
 
 /**
  * Implement the Custom Header feature.
