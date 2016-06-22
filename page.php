@@ -44,5 +44,5 @@ get_template_part('left-sidebar');
 
 <?php
 get_sidebar();
-include('left-sidebar-small.php');
+get_template_part('left-sidebar-small');
 get_footer();
