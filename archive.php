@@ -8,7 +8,7 @@
  */
 
 get_header();
-include('left-sidebar.php'); ?>
+get_template_part('left-sidebar'); ?>
 <!-- <div class="container"> -->
 	<div class="col-lg-7">
 		<div id="primary" class="content-area">

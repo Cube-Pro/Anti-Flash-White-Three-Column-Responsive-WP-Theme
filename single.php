@@ -8,7 +8,8 @@
  */
 
 get_header();
-include('left-sidebar.php');
+// get_template_part('left-sidebar');
+get_template_part('left-sidebar');
 ?>
 <!-- <div class="container"> -->
 	<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
@@ -43,5 +44,5 @@ include('left-sidebar.php');
 
 <?php
 get_sidebar();
-include('left-sidebar-small.php');
+get_template_part('left-sidebar');
 get_footer();

@@ -54,7 +54,7 @@ function anti_flash_white_theme_setup() {
 	add_action( 'after_setup_theme', 'wpt_setup' );
     if ( ! function_exists( 'wpt_setup' ) ):
         function wpt_setup() {  
-            register_nav_menu( 'primary', __( 'Primary navigation', 'wptuts' ) );
+            register_nav_menu( 'primary', __( 'Primary navigation', 'Anti-Flash-White' ) );
         } endif;
 
 
@@ -291,7 +291,7 @@ function bootstrap3_comment_form( $args ) {
 
 //Read More
 function new_excerpt_more( $more ) {
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('<br/>Read More...', 'your-text-domain') . '</a>';
+	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('<br/>Read More...', 'Anti-Flash-White') . '</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
@@ -312,11 +312,11 @@ function custom_post_navigation() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'anti_flash_white_theme' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'Anti-Flash-White' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<button class="nav-btn btn btn-success pull-left">%link</button>', _x( '<i class="fa fa-chevron-left"></i> %title', 'Previous post link', 'anti_flash_white_theme' ) );
-				next_post_link(     '<button class="nav-btn btn btn-success pull-right">%link</button>',     _x( '%title <i class="fa fa-chevron-right"></i>', 'Next post link',     'anti_flash_white_theme' ) );
+				previous_post_link( '<button class="nav-btn btn btn-success pull-left">%link</button>', _x( '<i class="fa fa-chevron-left"></i> %title', 'Previous post link', 'Anti-Flash-White' ) );
+				next_post_link(     '<button class="nav-btn btn btn-success pull-right">%link</button>',     _x( '%title <i class="fa fa-chevron-right"></i>', 'Next post link',     'Anti-Flash-White' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->

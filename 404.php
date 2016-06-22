@@ -8,7 +8,7 @@
  */
 
 get_header();
-include('left-sidebar.php');
+get_template_part('left-sidebar');
 ?>
 
 	<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">

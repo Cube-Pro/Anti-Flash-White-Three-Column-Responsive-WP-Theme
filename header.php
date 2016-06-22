@@ -34,7 +34,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a>
+				<a class="navbar-brand" href="<?php bloginfo('url')?>"><?php bloginfo('name'); ?></a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,7 +44,7 @@
 					<li><a href="#">Link</a></li>
 				</ul> -->
 
-				<form class="navbar-form navbar-right" role="search" action="<?php bloginfo('home'); ?>">
+				<form class="navbar-form navbar-right" role="search" action="<?php bloginfo('name'); ?>">
 					<!-- <div class="form-group">
 						<input type="text" class="form-control" placeholder="Search">
 					</div>

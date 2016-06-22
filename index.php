@@ -13,7 +13,7 @@
  */
 
 get_header();
-include('left-sidebar.php');
+get_template_part('left-sidebar');
 ?>
 <!-- <div class="container"> -->
 	

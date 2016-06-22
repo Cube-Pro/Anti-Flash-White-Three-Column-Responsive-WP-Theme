@@ -1,4 +1,4 @@
-<form method="get" id="search_form"  class="form-inline" role="search" action="<?php bloginfo('home'); ?>"/>
+<form method="get" id="search_form"  class="form-inline" role="search" action="<?php echo esc_url( home_url() ); ?>"/>
        <!-- <input type="text" class="form-control"  name="s" value="" >
        <button type="submit" class="btn btn-primary submit"><span class="fa fa-search"></span><span class="screen-reader-text">Submit</span></button> -->
        <div class="input-group">
