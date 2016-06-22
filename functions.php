@@ -88,9 +88,16 @@ function anti_flash_white_theme_setup() {
 		'default-color' => 'f0f0f0',
 		'default-image' => '',
 	) ) );
+
+
 }
 endif;
 add_action( 'after_setup_theme', 'anti_flash_white_theme_setup' );
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
