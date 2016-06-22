@@ -228,19 +228,19 @@ function mytheme_comment($comment, $args, $depth) {
     <?php if ( 'div' != $args['style'] ) : ?>
         <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
     <?php endif; ?>
-    <?php edit_comment_link( __( '(Edit)' ), '  ', '' );  ?>
+    <?php edit_comment_link( __( '(Edit)','Anti-Flash-White' ), '  ', '' );  ?>
     <div class="comment-author vcard">
         <span class="fa fa-comment-o fa-2x"></span>
-        <?php printf( __( '<cite class="fn">%s</cite> <span class="says">said on</span>' ), get_comment_author_link() ); ?>
+        <?php printf( __( '<cite class="fn">%s</cite> <span class="says">said on</span>','Anti-Flash-White' ), get_comment_author_link() ); ?>
         <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
         <?php
         /* translators: 1: date, 2: time */
-        printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time() ); ?></a>
+        printf( __('%1$s at %2$s' ,'Anti-Flash-White'), get_comment_date(),  get_comment_time() ); ?></a>
 
 
     </div>
     <?php if ( $comment->comment_approved == '0' ) : ?>
-         <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
+         <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ,'Anti-Flash-White' ); ?></em>
          
     <?php endif; ?>
 
@@ -267,11 +267,11 @@ function bootstrap3_comment_form_fields( $fields ) {
     $html5    = current_theme_supports( 'html5', 'comment-form' ) ? 1 : 0;
     
     $fields   =  array(
-        'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+        'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __( 'Name' ,'Anti-Flash-White' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
                     '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
-        'email'  => '<div class="form-group comment-form-email"><label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+        'email'  => '<div class="form-group comment-form-email"><label for="email">' . __( 'Email' ,'Anti-Flash-White' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
                     '<input class="form-control" id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div>',
-        'url'    => '<div class="form-group comment-form-url"><label for="url">' . __( 'Website' ) . '</label> ' .
+        'url'    => '<div class="form-group comment-form-url"><label for="url">' . __( 'Website' ,'Anti-Flash-White' ) . '</label> ' .
                     '<input class="form-control" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>'        
     );
     
@@ -281,7 +281,7 @@ function bootstrap3_comment_form_fields( $fields ) {
 add_filter( 'comment_form_defaults', 'bootstrap3_comment_form' );
 function bootstrap3_comment_form( $args ) {
     $args['comment_field'] = '<div class="form-group comment-form-comment">
-            <label for="comment">' . _x( 'Comment', 'noun' ) . '</label> 
+            <label for="comment">' . _x( 'Comment', 'noun','Anti-Flash-White' ) . '</label> 
             <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
         </div>';
     $args['class_submit'] = 'btn btn-success'; // since WP 4.1
