@@ -13,6 +13,8 @@ $(document).ready(function() {
 
     $('.rss-widget-icon').hide() ;
 
+    $('table').addClass('table table-condensed table-striped');
+
  }); 
 
   $("#shareIcons").jsSocials({

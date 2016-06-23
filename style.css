@@ -121,7 +121,7 @@ small {
 
 sub,
 sup {
-	font-size: 75%;
+	font-size: 70%;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
@@ -161,7 +161,7 @@ kbd,
 pre,
 samp {
 	font-family: monospace, monospace;
-	font-size: 1em;
+	/*font-size: 1em;*/
 }
 
 button,
@@ -260,11 +260,11 @@ body,
 input,
 select,
 textarea {
-	/*color: #404040;
+	color: #404040;
 	font-family: sans-serif;
 	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;*/
+	/*font-size: 1rem;*/
+	line-height: 1.5;
 }
 
 h1,
@@ -311,8 +311,8 @@ address {
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	/*font-size: 15px;*/
+	/*font-size: 0.9375rem;*/
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -325,8 +325,8 @@ kbd,
 tt,
 var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	/*font-size: 15px;
+	font-size: 0.9375rem;*/
 }
 
 abbr,
@@ -373,6 +373,7 @@ q:after {
 blockquote,
 q {
 	quotes: "" "";
+	font-style: italic;
 }
 
 hr {
@@ -763,10 +764,22 @@ a:active {
 	font-size: 3rem;
 }*/
 
+.widget-area{
+	background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-color: gray;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 3rem;
+
+}
+
 .widget ul{
 	list-style-type: none;
 	padding: 0px;
 	margin-left: 0px;
+	font-size: 1.5rem;
 }
 
 .widget li{
@@ -776,11 +789,11 @@ a:active {
 
 
 .widget {
-	
-	/*margin-bottom: 3.5em;*/
-	/*padding-top: 1.75em;*/
 	padding-bottom: 1.75em;
+	/*opacity: 1;*/
 }
+
+
 
 .widget_archive select{
 	/*margin: 50px;*/
@@ -829,6 +842,7 @@ border: 1px solid #111;
 /* Calendar widget */
 .widget.widget_calendar table {
 	margin: 0;
+	font-size: 1.25rem;
 }
 
 .widget_calendar td,
@@ -982,6 +996,17 @@ border: 1px solid #111;
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.image-bg{
+	background-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.image-bg img{
+	width: 100%;
+}
+
 
 .site-content{
 	margin-top: 70px;
@@ -1247,12 +1272,14 @@ object {
 	    background-color: darkgrey;
     padding: 2rem 0rem;
     margin: 3rem 0rem 0rem 0rem;
+    font-size: 1.25rem;
+    clear: both;
 }
 
 a.back-to-top {
 	display: none;
-	width: 40px;
-	height: 40px;
+	width: 50px;
+	height: 50px;
 	/*text-indent: -9999px;*/
 	position: fixed;
 	z-index: 999;
@@ -1262,7 +1289,7 @@ a.back-to-top {
 	opacity: .8;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
-	border-radius: 5px;
+	border-radius: 30px;
 	color: #ffffff;
 	text-align: center;
 }
@@ -1343,3 +1370,15 @@ i.back-to-top{
 .woocommerce input.button.alt {
 	background-color: #1f8c22 !important;
 } 
+
+.widget_shopping_cart >h2:before {
+	content: "\f07a";
+    font-family: FontAwesome;
+    padding-right: 1rem;
+    font-size: large;
+
+}
+
+.input-group{
+	width: 100%;
+}

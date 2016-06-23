@@ -8,9 +8,11 @@
  */
 
 get_header();
-get_template_part('left-sidebar'); ?>
-<!-- <div class="container"> -->
-	<div class="col-lg-7">
+get_template_part('left-sidebar'); 
+get_template_part('boot-size');
+?>
+
+
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 

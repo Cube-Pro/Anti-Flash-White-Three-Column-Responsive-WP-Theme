@@ -21,6 +21,12 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="back-to-top">
+	<a href="#" class="back-to-top">
+		<i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i>
+		<span class="screen-reader-text">Back to Top</span>
+	</a>
+</div>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'Anti-Flash-White' ); ?></a>
 
@@ -39,42 +45,10 @@
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				<!-- <ul class="nav navbar-nav">
-					<li class="active"><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-				</ul> -->
-
-				<form class="navbar-form navbar-right" role="search" action="<?php bloginfo('name'); ?>">
-					<!-- <div class="form-group">
-						<input type="text" class="form-control" placeholder="Search">
-					</div>
-					<button type="submit" class="btn btn-default">Submit</button> -->
-					<div class="input-group">
-      <input type="text" class="form-control" name="s" value="" placeholder="Search...">
-      <span class="input-group-btn">
-        <button class="btn btn-primary" type="submit"><span class="fa fa-search"></span></button>
-        <span class="screen-reader-text">Submit</span></button>
-      </span>
-
-</div>
-				</form>
-
-				<!-- <ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Link</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li><a href="#">Separated link</a></li>
-						</ul>
-					</li>
-				</ul> -->
 				<?php /* Primary navigation */
 					wp_nav_menu( array(
 					  'menu' => 'top_menu',
-					  'depth' => 2,
+					  'depth' => 5,
 					  'container' => false,
 					  'menu_class' => 'nav navbar-nav navbar-right',
 					  //Process nav menu using our custom nav walker
@@ -85,6 +59,4 @@
 			</div><!-- /.navbar-collapse -->
 		</div>
 	</nav>
-
-
-	<div id="content" class="site-content container">
+<div id="content" class="site-content container">

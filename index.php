@@ -14,10 +14,10 @@
 
 get_header();
 get_template_part('left-sidebar');
+get_template_part('boot-size');
 ?>
-<!-- <div class="container"> -->
+
 	
-	<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -43,8 +43,13 @@ get_template_part('left-sidebar');
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
 				if (has_post_thumbnail()) 
-				{
+				{ ?>
+					<div class="image-bg text-center">
+				<?php 
 					the_post_thumbnail();
+					?>
+					</div>
+					<?php
 				}
 
 

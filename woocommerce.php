@@ -14,11 +14,11 @@
 
 get_header(); 
 // get_template_part('left-sidebar');
+// get_template_part('boot-size');
 ?>
-<!-- <div class="container"> -->
-	<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main woo-shop" role="main" >
+<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-1 col-lg-offset-1">
+	<div id="primary" class="content-area">
+			<main id="main" class="site-main woo-shop" role="main">
 
 				<?php woocommerce_content(); ?>
 
@@ -27,6 +27,9 @@ get_header();
 	</div>
 
 <?php
-get_sidebar();
-// include('left-sidebar-small.php');
+// get_sidebar();
+get_template_part('woo-sidebar');
 get_footer();
+
+
+

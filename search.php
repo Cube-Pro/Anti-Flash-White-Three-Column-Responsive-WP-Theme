@@ -9,10 +9,8 @@
 
 get_header();
 get_template_part('left-sidebar');
+get_template_part('boot-size');
 ?>
-<!-- <div class="container"> -->
-
-	<div class="col-lg-7">
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
