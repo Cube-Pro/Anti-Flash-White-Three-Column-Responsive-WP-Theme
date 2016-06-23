@@ -49,16 +49,6 @@ function anti_flash_white_setup() {
 	// 	'primary' => esc_html__( 'Primary', 'Anti-Flash-White' ),
 	// ) );
 
-	// boostrap registraion menu
-
-	add_action( 'after_setup_theme', 'wpt_setup' );
-    if ( ! function_exists( 'wpt_setup' ) ):
-        function wpt_setup() {  
-            register_nav_menu( 'primary', __( 'Primary navigation', 'Anti-Flash-White' ) );
-        } endif;
-
-
-
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -98,6 +88,17 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
+
+
+// boostrap registraion menu
+
+add_action( 'after_setup_theme', 'wpt_setup' );	
+// if ( ! function_exists( 'wpt_setup' ) ):
+    function wpt_setup() {  
+        register_nav_menu( 'primary', __( 'Primary navigation', 'Anti-Flash-White' ) );
+    } 
+    // endif;
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

@@ -11,7 +11,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php anti_flash_white_social_icons(); ?>
+		<?php 
+
+			// if ( is_home() && ! is_front_page() ){
+			// 	anti_flash_white_social_icons();
+			// }
+			
+		?>
 		
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
@@ -30,7 +36,9 @@
 	<footer class="entry-footer">
 	<hr/>
 		<?php
-			anti_flash_white_theme_social_icons_large();
+			if (  ! is_front_page() ){
+				anti_flash_white_theme_social_icons_large();
+			}
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */

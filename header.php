@@ -24,7 +24,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'Anti-Flash-White' ); ?></a>
 
-	<nav class="navbar navbar-inverse navbar-fixed" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -72,16 +72,16 @@
 					</li>
 				</ul> -->
 				<?php /* Primary navigation */
-wp_nav_menu( array(
-  'menu' => 'top_menu',
-  'depth' => 2,
-  'container' => false,
-  'menu_class' => 'nav navbar-nav navbar-right',
-  //Process nav menu using our custom nav walker
-  'walker' => new wp_bootstrap_navwalker())
-);
+					wp_nav_menu( array(
+					  'menu' => 'top_menu',
+					  'depth' => 2,
+					  'container' => false,
+					  'menu_class' => 'nav navbar-nav navbar-right',
+					  //Process nav menu using our custom nav walker
+					  'walker' => new wp_bootstrap_navwalker())
+					);
 
-?>
+				?>
 			</div><!-- /.navbar-collapse -->
 		</div>
 	</nav>
