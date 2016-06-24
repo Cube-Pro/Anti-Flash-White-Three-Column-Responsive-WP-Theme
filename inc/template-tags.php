@@ -147,6 +147,21 @@ if (! function_exists('anti_flash_white_theme_social_icons_large') ):
 	}
 endif;
 
+if (! function_exists('anti_flash_white_theme_credits') ):
+	/**
+	 * Prints top set of social icons
+	 */
+	function anti_flash_white_theme_credits(){
+		$new_credits = sprintf( '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center"><div class="credits">Powered by WordPress<br/>Designed by %4$s<br/>&copy; %1$s <a href="%2$s" title="%3$s" rel="bookmark">%3$s</a></div></div><!-- .site-info -->',
+			    esc_attr( date( 'Y' ) ),
+			    esc_url( home_url() ),
+			    esc_attr(get_bloginfo()),
+			    '<a href="cubepro.us">Lorin Hart</a>'
+		);
+ 		echo $new_credits;
+	}
+endif;
+
 
 
 /**

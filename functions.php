@@ -76,7 +76,10 @@ function anti_flash_white_setup() {
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'anti_flash_white_custom_background_args', array(
 		'default-color' => 'f0f0f0',
-		'default-image' => '',
+		'default-image' => get_template_directory_uri() . '/inc/texture.png',
+		'default-repeat'         => 'tile',
+		'default-position-x'     => '',
+		'default-attachment'     => 'fixed',
 	) ) );
 
 
@@ -219,10 +222,18 @@ require get_template_directory() . '/inc/jetpack.php';
 
 require_once('wp_bootstrap_navwalker.php');
 
+add_action( 'init', 'cd_add_editor_styles' );
+/**
+ * Apply theme's stylesheet to the visual editor.
+ *
+ * @uses add_editor_style() Links a stylesheet to visual editor
+ * @uses get_stylesheet_uri() Returns URI of theme stylesheet
+ */
+function cd_add_editor_styles() {
 
+    add_editor_style( get_stylesheet_uri() );
 
-
-
+}
 
 
 
